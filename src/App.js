@@ -5,7 +5,7 @@ import Search from './components/Search';
 import Movie from './components/Movie';
 import Popup from './components/Popup';
 
-const MOVIE_API_URL = 'http://www.omdbapi.com/?s=furious&apikey=4ec68172'
+const MOVIE_API_URL = 'https://www.omdbapi.com/?s=furious&apikey=4ec68172'
 function App() {
   const [loading, setLoading] = useState(true)
   const [movies, setMovies] = useState([])
@@ -25,7 +25,7 @@ function App() {
   }, [])
 
   const search = searchValue =>{
-    const SEARCH_URL = `http://www.omdbapi.com/?s=${searchValue}&apikey=4ec68172`
+    const SEARCH_URL = `https://www.omdbapi.com/?s=${searchValue}&apikey=4ec68172`
     setLoading(true)
     setErrmsg(null)
     fetch(SEARCH_URL)  
@@ -45,7 +45,7 @@ function App() {
   // 33:18
 
   const openPopup = (id) =>{
-    const SPECIFIC_MOVIE_URL = `http://www.omdbapi.com/?i=${id}&apikey=4ec68172`
+    const SPECIFIC_MOVIE_URL = `https://www.omdbapi.com/?i=${id}&apikey=4ec68172`
     setLoading(true)
     setErrmsg(null)
     fetch(SPECIFIC_MOVIE_URL)
